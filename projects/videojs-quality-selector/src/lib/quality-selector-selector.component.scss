@@ -1,0 +1,83 @@
+.quality-selector {
+    position: absolute;
+    bottom: 34px;
+    left: 120px;
+    z-index: 2;
+  
+    .dropdown-toggle {
+      background-color: transparent;
+      color: #daddde;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      font-size: 16px;
+      position: relative;
+      z-index: 3;
+    }
+  
+    .dropdown-menu {
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      background-color: #141414;
+      color: #daddde;
+      border: 1px solid #333;
+      border-radius: 5px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      opacity: 1;
+      transition: opacity 0.3s ease;
+      visibility: visible;
+  
+      .qualityBtn {
+        cursor: pointer;
+        font-size: small;
+  
+        &:hover {
+          background-color: #333;
+        }
+      }
+    }
+}
+  
+.show-dropdown .dropdown-menu {
+    opacity: 0;
+    visibility: hidden;
+}
+  
+.quality-selector.show-dropdown .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+}
+  
+.hideQualitySelector {
+    animation: hideQualityBtn 0.4s linear forwards;
+}
+  
+@keyframes hideQualityBtn {
+    0% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0;
+    }
+}
+  
+  
+.showQualitySelector {
+    animation: showQualityBtn 0.08s linear forwards;
+}
+  
+@keyframes showQualityBtn {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+}
