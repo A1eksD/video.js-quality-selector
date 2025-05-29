@@ -10,6 +10,7 @@
     "types": []
   },
   "exclude": [
+    "src/videojs-extensions.d.ts",
     "**/*.spec.ts"
   ]
 }
